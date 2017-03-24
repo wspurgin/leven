@@ -25,8 +25,8 @@ static VALUE leven_distance(VALUE klass, VALUE rb_obj1, VALUE rb_obj2) {
       utf8_len2 = u8_strlen(raw_word2);
   u_int32_t *word1_buffer, *word2_buffer, *word1, *word2;
 
-  word1_buffer = calloc(utf8_len1, sizeof(u_int32_t));
-  word2_buffer = calloc(utf8_len2, sizeof(u_int32_t));
+  word1_buffer = calloc(utf8_len1+1, sizeof(u_int32_t));
+  word2_buffer = calloc(utf8_len2+1, sizeof(u_int32_t));
 
   word1 = word1_buffer;
   word2 = word2_buffer;
